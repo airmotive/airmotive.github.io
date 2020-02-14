@@ -1,0 +1,6 @@
+[submodule "old"]
+	path = old
+	url = git@github.com:octaflop/airmotive_back.git
+[submodule "_data"]
+	path = _data
+	url = https://github.com/Netuser-Py/airmotive_data.git
