@@ -66,3 +66,5 @@ exclude: [
 # Theme Settings
 analytics: UA-40720897-4
 google_verification: "TGpcV5YcgeIhnN7B-MBLTGpYiA1qmBHNVsbl9fcVo48"
+
+theme: jekyll-theme-cayman
