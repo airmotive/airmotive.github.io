@@ -13,21 +13,33 @@
         <div class="media">
           <div class="media-left">
             <img src="{{ site.baseurl }}/static/imgs/aircraft/{{ plane.photo }}" 
-              alt="{{ plane.tail }} photo" width='200' height='110' class="img-rounded pull-left">
+              {% if plane.tail %}        
+                alt="{{ plane.tail }} photo"   
+              {% else %}   
+                alt="{{ plane.type }} photo"         
+              {% endif %}              
+              width='200' height='110' class="img-rounded pull-left">
           </div>
           <div class="media-body">
             <h3 class="media-heading">
               {{ plane.type }}
-            </h3>
-            <h5 class="media-heading">
-              {{ plane.tail }}
-            </h5>
+            </h3>            
+            {% if plane.tail %}
+              <h4 class="media-heading">
+                {{ plane.tail }}
+              </h4>
+            {% endif %}
             <p>
               {{ plane.price }} / hr
             </p>
             {% if plane.price1 %}
             <p>
               {{ plane.price1 }} / hr
+            </p>
+            {% endif %}
+            {% if plane.price2 %}
+            <p>
+              {{ plane.price2 }} / hr
             </p>
             {% endif %}
             <p>        
